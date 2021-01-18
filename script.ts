@@ -10,7 +10,7 @@ function createHtmlElement(element: string,  className='', id=''){
 
 let wordDisplay = document.getElementById('wordBox');
 let randomWord: string[];
-async function randomWordGen() {
+async function randomWordGen(): Promise<void>{
     
     let randomWordResp = await fetch('https://random-word-api.herokuapp.com/word?number=1');
     let randomWordData = await randomWordResp.json();
